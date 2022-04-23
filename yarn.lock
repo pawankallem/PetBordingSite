@@ -680,6 +680,11 @@
   "resolved" "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
 
+"thunks@^4.9.6":
+  "integrity" "sha512-ulXG17ZokTO8j0rTx/23YHsBuz6KAK1xdBPLH4zB1FRDUkttCQeli3DxGhhYtrrsRwzacSG+ZIebjSgLseluMw=="
+  "resolved" "https://registry.npmjs.org/thunks/-/thunks-4.9.6.tgz"
+  "version" "4.9.6"
+
 "to-fast-properties@^2.0.0":
   "integrity" "sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4="
   "resolved" "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-2.0.0.tgz"

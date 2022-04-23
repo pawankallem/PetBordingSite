@@ -9,7 +9,7 @@ import "./Home.css"
 export const Home=()=>{
     const [data,setData]=useState([])
     const navigate=useNavigate()
-    const details=useSelector((state)=>state.details)
+    // const details=useSelector((state)=>state.details)
     const dispatch=useDispatch()
 
     useEffect(()=>{

@@ -15,6 +15,7 @@
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "redux": "^4.2.0",
+    "thunks": "^4.9.6",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

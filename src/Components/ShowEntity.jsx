@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import "./home.css"
+import "./Home.css"
 
 export const ShowEntity = () => {
   const param = useParams();
