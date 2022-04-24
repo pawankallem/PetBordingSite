@@ -7,7 +7,7 @@ export const ShowEntity = () => {
   const param = useParams();
   const details = useSelector((state) => state.details);
 
-  const temp = details.data.filter((e) => e.id == param.id);
+  const temp = details.data.filter((e) => e._id == param.id);
 //   console.log(temp);
 
   return (

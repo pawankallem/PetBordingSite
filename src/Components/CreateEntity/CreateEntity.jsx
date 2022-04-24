@@ -1,12 +1,11 @@
 
 import React, { useState } from "react";
 import "./CreateEntity.css"
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const initState={
-    id:uuidv4(),
     name:"",
     city:"",
     address:"",
@@ -50,7 +49,8 @@ export const CreateEntity=()=>{
         e.preventDefault();
         axios.post("https://petbordingsite.herokuapp.com/pets/create",inputData)
         .then((res)=>{
-            // console.log(res)
+            // console.log(res.data)
+            alert("Successfully Created!")
             navigate("/")
         })
 

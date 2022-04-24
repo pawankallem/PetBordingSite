@@ -50,8 +50,8 @@ export const Home=()=>{
             <tbody>
                 {
                     data.map((elem)=>{
-                       return  <tr key={elem.id} onClick={()=>{ navigate(`/listing/${elem.id}`)}}>
-                            <td>{elem.id}</td>
+                       return  <tr key={elem._id} onClick={()=>{ navigate(`/listing/${elem._id}`)}}>
+                            <td>{elem._id}</td>
                             <td>{elem.name}</td>
                             <td>{elem.city}</td>
                             <td>{elem.address}</td>
