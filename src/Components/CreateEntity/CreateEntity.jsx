@@ -48,7 +48,7 @@ export const CreateEntity=()=>{
     const handleSubmit=(e)=>{
 
         e.preventDefault();
-        axios.post("http://localhost:8080/pets",inputData)
+        axios.post("https://petbordingsite.herokuapp.com/pets/create",inputData)
         .then((res)=>{
             // console.log(res)
             navigate("/")

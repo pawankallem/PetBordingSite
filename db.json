@@ -134,6 +134,27 @@
       "homeType": "sfgsdf",
       "areaSize": "Medium",
       "emergencyTransport": ""
+    },
+    {
+      "id": "31921ac7-9113-43a3-ae18-528d9f376c24",
+      "name": "",
+      "city": "",
+      "address": "",
+      "capacity": "",
+      "costPerDay": "",
+      "verified": "",
+      "rating": "",
+      "typeDog": true,
+      "typeCat": true,
+      "typeRabit": true,
+      "weight": 0,
+      "roamingPlace": "",
+      "sleepingPlace": "",
+      "pottyBreaks": 0,
+      "walksPerDay": 0,
+      "homeType": "",
+      "areaSize": "",
+      "emergencyTransport": ""
     }
   ]
 }

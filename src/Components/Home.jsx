@@ -20,7 +20,7 @@ export const Home=()=>{
 
     function get(){
 
-        axios.get("http://localhost:8080/pets")
+        axios.get("https://petbordingsite.herokuapp.com/pets/all")
         .then((res)=>{
             dispatch(petsData(res.data))
 
