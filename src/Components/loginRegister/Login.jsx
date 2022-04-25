@@ -21,8 +21,9 @@ export const Login=()=>{
         e.preventDefault()
         axios.post("https://petbordingsite.herokuapp.com/user/login",login)
         .then((res)=>{
-            console.log(res.data)
-            // navigate("/")
+            // console.log(res.data)
+            alert("Login Successful!")
+            navigate("/")
         })
     }
 

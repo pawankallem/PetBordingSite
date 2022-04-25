@@ -21,7 +21,8 @@ export const Register=()=>{
         e.preventDefault()
         axios.post("https://petbordingsite.herokuapp.com/user/register",register)
         .then((res)=>{
-            console.log(res.data)
+            // console.log(res.data)
+            alert("Registration successful!")
             navigate("/login")
         })
     }
