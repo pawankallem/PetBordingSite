@@ -10,6 +10,9 @@ export const Home=()=>{
     const [data,setData]=useState([])
     const navigate=useNavigate()
     // const details=useSelector((state)=>state.details)
+    const [page,setPage]=useState(1);
+    // const [size,setSize]=useState(6);
+    const [totalpage,setTotalPage]=useState(0)
     const dispatch=useDispatch()
 
     useEffect(()=>{
@@ -20,13 +23,25 @@ export const Home=()=>{
 
     function get(){
 
-        axios.get("https://petbordingsite.herokuapp.com/pets/all")
+        axios.get(`https://petbordingsite.herokuapp.com/pets/all?page=${page}&size=2`)
         .then((res)=>{
-            dispatch(petsData(res.data))
-
-            setData(res.data)
+            // console.log(res.data.totalPages)
+            // dispatch(petsData(res.data.entity))
+            setTotalPage(res.data.totalPages)
+            setData(res.data.entity)
             // console.log(data)
         })
+    }
+    function handlePageChange(n){
+        setPage(page+n)
+        get()
+    }
+
+    function handleNumbers(e){
+        console.log(e.target.value)
+        let num=e.target.value
+        setPage(+num);
+        get()
     }
 
     // get()
@@ -34,7 +49,7 @@ export const Home=()=>{
     return <div>
         <h1>Home</h1>
 
-        <table>
+        <table style={{margin:"auto"}}>
             <thead>
                 <tr>
                     <th>id</th>
@@ -65,6 +80,12 @@ export const Home=()=>{
             </tbody>
         </table>
 
+                <div style={{width:"10%",display:"flex",gap:"5px",margin:"auto",marginTop:"50px"}}>
+                    {page==1?"":<button onClick={()=>{handlePageChange(-1)}}> Previous </button>}
+                    {page+1<=totalpage?<button value={page+1} onClick={handleNumbers}>{page+1}</button> :""}
+                    {page+2<=totalpage? <button value={page+2} onClick={handleNumbers}>{page+2}</button> :""}
+                    {totalpage==page?"":<button onClick={()=>{handlePageChange(1)}}> Next </button>}
+                </div>
 
     </div>
 }
